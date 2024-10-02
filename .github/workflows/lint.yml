@@ -1,0 +1,22 @@
+on:
+  push:
+    branches:
+      - "**"
+    tags:
+      - "v*.*.*"
+  pull_request:
+    branches:
+      - "main"
+  workflow_dispatch:
+
+name: "Lint"
+permissions: {}
+
+jobs:
+  shellcheck:
+    name: Shellcheck
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run ShellCheck
+        uses: ludeeus/action-shellcheck@master
