@@ -1,0 +1,55 @@
+{
+    "type": "result",
+    "timestamp": "2024-10-02T12:05:39Z",
+    "ping": {
+        "jitter": 0.162,
+        "latency": 7.442,
+        "low": 7.083,
+        "high": 7.571
+    },
+    "download": {
+        "bandwidth": 13401571,
+        "bytes": 79087680,
+        "elapsed": 5910,
+        "latency": {
+            "iqm": 33.614,
+            "low": 7.433,
+            "high": 61.070,
+            "jitter": 1.446
+        }
+    },
+    "upload": {
+        "bandwidth": 4832018,
+        "bytes": 17412480,
+        "elapsed": 3603,
+        "latency": {
+            "iqm": 18.285,
+            "low": 15.694,
+            "high": 22.433,
+            "jitter": 1.409
+        }
+    },
+    "packetLoss": 0,
+    "isp": "ISP",
+    "interface": {
+        "internalIp": "192.168.80.5",
+        "name": "eth0",
+        "macAddr": "02:42:CC:CC:CC:CC",
+        "isVpn": false,
+        "externalIp": "12.34.56.78"
+    },
+    "server": {
+        "id": 31448,
+        "host": "ffm.wsqm.telekom-dienste.de",
+        "port": 8080,
+        "name": "Deutsche Telekom",
+        "location": "Frankfurt am Main",
+        "country": "Germany",
+        "ip": "80.187.136.31"
+    },
+    "result": {
+        "id": "uuid",
+        "url": "https://www.speedtest.net/result/c/uuid",
+        "persisted": true
+    }
+}

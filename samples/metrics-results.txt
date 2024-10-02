@@ -1,0 +1,72 @@
+# HELP script_success Script exit status (0 = error, 1 = success).
+# TYPE script_success gauge
+script_success{script="speedtest"} 1
+# HELP script_duration_seconds Script execution time, in seconds.
+# TYPE script_duration_seconds gauge
+script_duration_seconds{script="speedtest"} 11.471082
+# HELP script_exit_code The exit code of the script.
+# TYPE script_exit_code gauge
+script_exit_code{script="speedtest"} 0
+# HELP script_use_cache Script use cache (0 = no, 1 = yes).
+# TYPE script_use_cache gauge
+script_use_cache{script="speedtest"} 0
+# HELP script_use_expired_cache Script re-use expired cache (0 = no, 1 = yes).
+# TYPE script_use_expired_cache gauge
+script_use_expired_cache{script="speedtest"} 0
+# TYPE speedtester_ping_jitter gauge
+# HELP speedtester_ping_jitter Jitter in milliseconds
+speedtester_ping_jitter{server_id="31448",server_ip="80.187.136.31",server_host="ffm.wsqm.telekom-dienste.de",server_name="Deutsche Telekom"} 1.150
+# TYPE speedtester_ping_latency gauge
+# HELP speedtester_ping_latency Average latency in milliseconds
+speedtester_ping_latency{server_id="31448",server_ip="80.187.136.31",server_host="ffm.wsqm.telekom-dienste.de",server_name="Deutsche Telekom"} 8.346
+# TYPE speedtester_ping_low gauge
+# HELP speedtester_ping_low Lowest latency recorded in milliseconds
+speedtester_ping_low{server_id="31448",server_ip="80.187.136.31",server_host="ffm.wsqm.telekom-dienste.de",server_name="Deutsche Telekom"} 7.951
+# TYPE speedtester_ping_high gauge
+# HELP speedtester_ping_high Highest latency recorded in milliseconds
+speedtester_ping_high{server_id="31448",server_ip="80.187.136.31",server_host="ffm.wsqm.telekom-dienste.de",server_name="Deutsche Telekom"} 10.269
+# TYPE speedtester_download_bandwidth gauge
+# HELP speedtester_download_bandwidth Download bandwidth in bits per second
+speedtester_download_bandwidth{server_id="31448",server_ip="80.187.136.31",server_host="ffm.wsqm.telekom-dienste.de",server_name="Deutsche Telekom"} 13397023
+# TYPE speedtester_download_bytes counter
+# HELP speedtester_download_bytes Total bytes downloaded
+speedtester_download_bytes{server_id="31448",server_ip="80.187.136.31",server_host="ffm.wsqm.telekom-dienste.de",server_name="Deutsche Telekom"} 84376800
+# TYPE speedtester_download_elapsed gauge
+# HELP speedtester_download_elapsed Time elapsed for download in milliseconds
+speedtester_download_elapsed{server_id="31448",server_ip="80.187.136.31",server_host="ffm.wsqm.telekom-dienste.de",server_name="Deutsche Telekom"} 6316
+# TYPE speedtester_download_latency_iqm gauge
+# HELP speedtester_download_latency_iqm Interquartile mean latency during download in milliseconds
+speedtester_download_latency_iqm{server_id="31448",server_ip="80.187.136.31",server_host="ffm.wsqm.telekom-dienste.de",server_name="Deutsche Telekom"} 33.444
+# TYPE speedtester_download_latency_low gauge
+# HELP speedtester_download_latency_low Lowest latency during download in milliseconds
+speedtester_download_latency_low{server_id="31448",server_ip="80.187.136.31",server_host="ffm.wsqm.telekom-dienste.de",server_name="Deutsche Telekom"} 13.221
+# TYPE speedtester_download_latency_high gauge
+# HELP speedtester_download_latency_high Highest latency during download in milliseconds
+speedtester_download_latency_high{server_id="31448",server_ip="80.187.136.31",server_host="ffm.wsqm.telekom-dienste.de",server_name="Deutsche Telekom"} 54.269
+# TYPE speedtester_download_latency_jitter gauge
+# HELP speedtester_download_latency_jitter Jitter during download in milliseconds
+speedtester_download_latency_jitter{server_id="31448",server_ip="80.187.136.31",server_host="ffm.wsqm.telekom-dienste.de",server_name="Deutsche Telekom"} 1.279
+# TYPE speedtester_upload_bandwidth gauge
+# HELP speedtester_upload_bandwidth Upload bandwidth in bits per second
+speedtester_upload_bandwidth{server_id="31448",server_ip="80.187.136.31",server_host="ffm.wsqm.telekom-dienste.de",server_name="Deutsche Telekom"} 4870315
+# TYPE speedtester_upload_bytes counter
+# HELP speedtester_upload_bytes Total bytes uploaded
+speedtester_upload_bytes{server_id="31448",server_ip="80.187.136.31",server_host="ffm.wsqm.telekom-dienste.de",server_name="Deutsche Telekom"} 19464430
+# TYPE speedtester_upload_elapsed gauge
+# HELP speedtester_upload_elapsed Time elapsed for upload in milliseconds
+speedtester_upload_elapsed{server_id="31448",server_ip="80.187.136.31",server_host="ffm.wsqm.telekom-dienste.de",server_name="Deutsche Telekom"} 4003
+# TYPE speedtester_upload_latency_iqm gauge
+# HELP speedtester_upload_latency_iqm Interquartile mean latency during upload in milliseconds
+speedtester_upload_latency_iqm{server_id="31448",server_ip="80.187.136.31",server_host="ffm.wsqm.telekom-dienste.de",server_name="Deutsche Telekom"} 19.645
+# TYPE speedtester_upload_latency_low gauge
+# HELP speedtester_upload_latency_low Lowest latency during upload in milliseconds
+speedtester_upload_latency_low{server_id="31448",server_ip="80.187.136.31",server_host="ffm.wsqm.telekom-dienste.de",server_name="Deutsche Telekom"} 9.140
+# TYPE speedtester_upload_latency_high gauge
+# HELP speedtester_upload_latency_high Highest latency during upload in milliseconds
+speedtester_upload_latency_high{server_id="31448",server_ip="80.187.136.31",server_host="ffm.wsqm.telekom-dienste.de",server_name="Deutsche Telekom"} 27.465
+# TYPE speedtester_upload_latency_jitter gauge
+# HELP speedtester_upload_latency_jitter Jitter during upload in milliseconds
+speedtester_upload_latency_jitter{server_id="31448",server_ip="80.187.136.31",server_host="ffm.wsqm.telekom-dienste.de",server_name="Deutsche Telekom"} 2.661
+# TYPE speedtester_packet_loss gauge
+# HELP speedtester_packet_loss Packet loss in percentage
+speedtester_packet_loss{server_id="31448",server_ip="80.187.136.31",server_host="ffm.wsqm.telekom-dienste.de",server_name="Deutsche Telekom"} 0
