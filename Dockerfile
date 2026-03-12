@@ -20,7 +20,6 @@ RUN ARCH=$(apk info --print-arch) && \
 RUN ARCH=$(apk info --print-arch) && \
     case "$ARCH" in \
       x86_64) _arch=amd64 ;; \
-      armhf) _arch=armv7 ;; \
       aarch64) _arch=arm64 ;; \
       *) _arch="$ARCH" ;; \
     esac && \
