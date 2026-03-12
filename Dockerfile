@@ -35,4 +35,4 @@ COPY speedtest-exporter.sh /usr/local/bin/speedtest-exporter.sh
 
 EXPOSE 9469
 
-ENTRYPOINT  [ "/usr/local/bin/script_exporter" ]
+ENTRYPOINT  [ "/usr/local/bin/script_exporter", "--config.files=config.yaml" ]
