@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-COMMAND="/usr/local/bin/speedtest --accept-license --accept-gdpr -f json"
+COMMAND="${SPEEDTEST_COMMAND:-/usr/local/bin/speedtest --accept-license --accept-gdpr -f json}"
 
 if [ -n "${SERVER_ID}" ]
 then
@@ -10,8 +10,13 @@ fi
 
 # Function to output metrics from JSON data
 output_metrics() {
-  # Read JSON data from standard input
-  json_data=$(${COMMAND})
+  # Run speedtest and extract only the result line (ignoring log/error lines)
+  json_data=$(${COMMAND} | jq -c 'select(.type == "result")')
+
+  if [ -z "${json_data}" ]; then
+    echo "Error: speedtest returned no result" >&2
+    exit 1
+  fi
 
   # Extract labels
   #isp=$(echo "${json_data}" | jq -r '.isp')

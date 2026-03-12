@@ -20,3 +20,13 @@ jobs:
       - uses: actions/checkout@v6
       - name: Run ShellCheck
         uses: ludeeus/action-shellcheck@master
+
+  bats:
+    name: Bats tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Install bats and jq
+        run: sudo apt-get install -y bats jq
+      - name: Run tests
+        run: bats tests/speedtest-exporter.bats

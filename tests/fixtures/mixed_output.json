@@ -1,0 +1,7 @@
+{"type":"log","timestamp":"2026-03-12T14:36:26Z","message":"Error: [101] Network unreachable","level":"error"}
+{"type":"log","timestamp":"2026-03-12T14:36:26Z","message":"Error: [-3] Try again","level":"error"}
+{"type":"log","timestamp":"2026-03-12T14:36:26Z","message":"Error: [-3] Try again","level":"error"}
+{"type":"log","timestamp":"2026-03-12T14:36:26Z","message":"Error: [-3] Try again","level":"error"}
+{"type":"log","timestamp":"2026-03-12T14:36:26Z","message":"Error: [-3] Try again","level":"error"}
+{"type":"log","timestamp":"2026-03-12T14:36:26Z","message":"Error: [-3] Try again","level":"error"}
+{"type":"result","timestamp":"2026-03-12T14:36:38Z","ping":{"jitter":0.145,"latency":4.568,"low":4.330,"high":4.713},"download":{"bandwidth":13417577,"bytes":48513600,"elapsed":3613,"latency":{"iqm":15.194,"low":7.548,"high":23.755,"jitter":0.922}},"upload":{"bandwidth":2629393,"bytes":16796160,"elapsed":6600,"latency":{"iqm":16.429,"low":9.575,"high":252.643,"jitter":4.936}},"isp":"Deutsche Telekom AG","interface":{"internalIp":"192.168.80.3","name":"eth0","macAddr":"62:F6:5D:3F:3F:6B","isVpn":false,"externalIp":"84.133.35.104"},"server":{"id":74184,"host":"stgt-tc.wsqm.telekom-dienste.de","port":8080,"name":"Deutsche Telekom","location":"Stuttgart","country":"Germany","ip":"37.51.193.149"},"result":{"id":"d17e101e-955f-47cd-9a75-b7c94aa3056e","url":"https://www.speedtest.net/result/c/d17e101e-955f-47cd-9a75-b7c94aa3056e","persisted":true}}

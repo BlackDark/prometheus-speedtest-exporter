@@ -10,6 +10,7 @@ on:
       - config.yaml
       - Dockerfile
       - speedtest-exporter.sh
+      - tests/**
     tags:
       - "v*.*.*"
   pull_request:
@@ -19,6 +20,7 @@ on:
       - config.yaml
       - Dockerfile
       - speedtest-exporter.sh
+      - tests/**
   workflow_dispatch:
 
 permissions:
