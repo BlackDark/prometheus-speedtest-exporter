@@ -24,10 +24,12 @@ RUN ARCH=$(apk info --print-arch) && \
       aarch64) _arch=arm64 ;; \
       *) _arch="$ARCH" ;; \
     esac && \
-    echo https://github.com/ricoberger/script_exporter/releases/download/${SCRIPT_EXPORTER_VERSION}/script_exporter-linux-${_arch} && \
-    curl -kfsSL -o /usr/local/bin/script_exporter \
-      https://github.com/ricoberger/script_exporter/releases/download/${SCRIPT_EXPORTER_VERSION}/script_exporter-linux-${_arch} && \
-    chmod +x /usr/local/bin/script_exporter
+    echo https://github.com/ricoberger/script_exporter/releases/download/${SCRIPT_EXPORTER_VERSION}/script_exporter-linux-${_arch}.tar.gz && \
+    curl -fsSL -o /tmp/script_exporter.tar.gz \
+      https://github.com/ricoberger/script_exporter/releases/download/${SCRIPT_EXPORTER_VERSION}/script_exporter-linux-${_arch}.tar.gz && \
+    tar xfz /tmp/script_exporter.tar.gz -C /usr/local/bin script_exporter && \
+    chmod +x /usr/local/bin/script_exporter && \
+    rm /tmp/script_exporter.tar.gz
 
 COPY config.yaml config.yaml
 COPY speedtest-exporter.sh /usr/local/bin/speedtest-exporter.sh
