@@ -1,11 +1,11 @@
 #!/bin/bash
 set -e
 
-if [ -z "${server_id}" ]
+COMMAND="/usr/local/bin/speedtest --accept-license --accept-gdpr -f json"
+
+if [ -n "${SERVER_ID}" ]
 then
-    COMMAND="/usr/local/bin/speedtest --accept-license --accept-gdpr -f json"
-else
-    COMMAND="${COMMAND} --server-id ${server_id}"
+    COMMAND="${COMMAND} --server-id ${SERVER_ID}"
 fi
 
 # Function to output metrics from JSON data
@@ -16,12 +16,12 @@ output_metrics() {
   # Extract labels
   #isp=$(echo "${json_data}" | jq -r '.isp')
   # Not included your interface information
-  server_id=$(echo "${json_data}" | jq -r '.server.id')
+  server_id_label=$(echo "${json_data}" | jq -r '.server.id')
   server_ip=$(echo "${json_data}" | jq -r '.server.ip')
   server_host=$(echo "${json_data}" | jq -r '.server.host')
   server_name=$(echo "${json_data}" | jq -r '.server.name')
 
-  LABELS="{server_id=\"${server_id}\",server_ip=\"${server_ip}\",server_host=\"${server_host}\",server_name=\"${server_name}\"}"
+  LABELS="{server_id=\"${server_id_label}\",server_ip=\"${server_ip}\",server_host=\"${server_host}\",server_name=\"${server_name}\"}"
 
   # Extract and output each metric with comments and labels
   echo "# TYPE speedtester_ping_jitter gauge"
