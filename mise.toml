@@ -1,0 +1,8 @@
+[tools]
+shellcheck = "0.11.0"
+bats = "1.14.0"
+jq = "1.8.2"
+
+[tasks.check]
+description = "ShellCheck and Bats tests"
+run = "shellcheck speedtest-exporter.sh && bats tests/speedtest-exporter.bats"
