@@ -13,14 +13,6 @@ on:
       - tests/**
     tags:
       - "v*.*.*"
-  pull_request:
-    branches:
-      - "main"
-    paths:
-      - config.yaml
-      - Dockerfile
-      - speedtest-exporter.sh
-      - tests/**
   workflow_dispatch:
 
 permissions:
@@ -33,6 +25,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
       - name: Docker meta
         id: meta
         uses: docker/metadata-action@dc802804100637a589fabce1cb79ff13a1411302 # v6.2.0
@@ -73,5 +67,7 @@ jobs:
           context: .
           platforms: linux/amd64,linux/arm64
           push: ${{ github.event_name != 'pull_request' }}
+          cache-from: type=registry,ref=ghcr.io/blackdark/prometheus-speedtest-exporter:buildcache
+          cache-to: type=registry,ref=ghcr.io/blackdark/prometheus-speedtest-exporter:buildcache,mode=max
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
